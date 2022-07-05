@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Play or Not</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            
+        }
+        body{
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            margin: 15px 38px;
+            font-size: 17px;
+            padding: 8px;
+            border:black 3px solid;
+        }
+        input
+        {
+            width: 10%;
+            padding: 5px;
+            border:black 1px solid;
+            border-radius: 2px;
+            margin: 2px;
+        }
+        input[type="submit"]{
+            background-color: green;
+            color: ivory;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 10%;
+        }
+        input[type="submit"]:hover{
+            background-color: lawngreen;
+        }
+        h1{
+            text-align: center;
+            border: blue 2px solid;
+            border-radius: 4px;
+        }
+    </style>
+    
+    
+</head>
+<body>
+    <h1>PLAY TENNIS OR NOT</h1>
+    <FORM method="POST" action="/"> 
+        <label for="t1">Outlook:</label>
+        <input  temputer  type="text" name="t1" placeholder="Outlook">
+        <br>
+        <label for="t2">Temp  &nbsp; 	:</label>
+        <input type="text" name="t2" placeholder="Temperature	">
+        <br>
+        <label for="t3">Humidit :</label>
+        <input type="text" name="t3" placeholder="Humidity	">
+        <br>
+        <label for="t4">Wind &nbsp;&nbsp; :</label>
+        <input type="text" name="t4" placeholder="wind">
+        <br>
+        <br>
+        <input type="submit">
+        {% if play%}
+
+        <h1>RESULT : <b>{{play}}</b></h1>
+        {% endif %}
+
+
+    </FORM>
+    <p>
+        <h4>Description:</h4>
+        Outlook  sunnay,overcast,rain : 0,1,2
+        <br>
+        Temperature	 hot,mild,cool : 0,1,2
+        <br>
+        Humidity High normal: 0,1
+        <br>
+        Wind strong ,weak : 0,1
+        <br>
+        based on Outlook,Temperature,Humidity and wind we predict that paly Tennis or Not 
+        
+    </p>
+    <footer>
+        <ul  class="icons">
+            <li><a href="https://www.linkedin.com/in/sneh-singh-436261194/" class="icon brands fa fa-linkedin"><span class="label">Linkedln</span></a></li>
+    </ul>
+    </footer>
+</body>
+</html>
